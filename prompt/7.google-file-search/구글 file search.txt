@@ -1,0 +1,7 @@
+
+# 구글의 RAG 솔루션 : file search
+- google 의 Gemini file search API 를 활용해서 pdf 파일을 읽어서 RAG를 할 수 있는 코드를 만들어주는데
+# 파일명 : google_rag.py (있으면 지우고 다시시작)
+# 화면구성
+- ref.py 를 참고해서 똑같이 만들어줘 (화면 모양과 답변스타일을 그대로 만들어줘)
+- ref.py는 FAISS를 vector db로 해서 만드는데, 이것은 google 의 내장 vector db를 활용해서 file search를 구성하는 것이야.

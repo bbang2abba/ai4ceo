@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.log
+logs/
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
+.streamlit/secrets.toml

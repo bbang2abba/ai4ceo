@@ -1,0 +1,54 @@
+다음을 하기전에 ref.py 파일을 c: 디스크에 있는 /ai4ceo에 copy를 합니다. 
+.env 파일내에 PERPLEXITY_API_KEY 를 PPLX_API_KEY 로 변경하세요 (최근에 바뀌었습니다)
+
+
+@02-openai-chat2.py 
+langchain과 streamlit을 활용해서 간단한 챗봇 만들기(02-openai-chat2.py)
+[요구사항]
+전체 UI와 사용하는 처리 로직, 답변 방식은 project home directory에 있는 ref.py를 참고해줘.
+항상 context7 mcp server를 참조해서 코딩해줘.
+화면의 타이틀은 "My AI Agent Chatbot" 이라고 해줘.
+나는 3개의 요구사항이 있어. 이것은 니가 질문에 따라서 판단해줘.
+1. 현재 날짜나 시간을 물어보면 이에 대해 답한다
+2. 현재 인터넷에 대한 새로운 뉴스나 정보를 물어보면 perplexity로 검색해서 답을 한다
+3. RAG형태로 문서을 입력하는 창을 만들어줘. 그리고 문서에 대한 질문을 하면, RAG형태로 답을 해줘.
+파일이름을 02-openai-chat2.py 으로 해주고, 이미 있으면 업데이트를 해줘.
+[구현기술]
+.env 파일을 읽어서 api key를 가져와줘.
+langchain, openai api 를 사용해줘.
+현재 날짜와 시간은 python function으로 구현해줘
+인터넷검색도 langchain을 활용한 perplexity function으로 구현해줘
+perplexity의 모델명은 "sonar-pro"를 사용해줘.
+RAG function을 구현해줘. 이것은 vector DB는 FAISS를 사용해줘. retrieval은 ensemble 검색으로 해줘. 
+화면의 왼쪽에서 pdf 파일을 입력받아줘.
+embedding은 openai embeddings를 사용해줘
+3개의 함수중에서 사용자의 질문에 따라서 가장 적합한 함수를 선택해서 실행하고 답을 해줘. 즉 3개의 함수가 tools 가 되는거야.
+langchain의 AgentExecutor를 사용해서 AI Agent를 구현해줘.
+llm은 gpt-4o-mini 를 사용해줘.
+답변은 항상 한국어로 해줘.
+
+------------------------------
+
+@02-openai-chat3.py 
+langchain과 streamlit을 활용해서 간단한 챗봇 만들기(02-openai-chat3.py)
+[요구사항]
+전체 UI와 사용하는 처리 로직, 답변 방식은 project home directory에 있는 ref.py를 참고해줘.
+항상 context7 mcp server를 참조해서 코딩해줘.
+화면의 타이틀은 "My Three Chatbot" 이라고 해줘.
+나는 3개의 요구사항이 있어. 이것을 3개의 버튼을 만들어줘 (현재시간, 인터넷검색, RAG검색)
+1. 현재시간: 현재 날짜나 시간을 물어보면 이에 대해 답한다
+2. 인터넷검색: 현재 인터넷에 대한 새로운 뉴스나 정보를 물어보면 perplexity로 검색해서 답을 한다
+3. RAG검색: RAG형태로 문서을 입력하는 창을 만들어줘. 그리고 문서에 대한 질문을 하면, RAG형태로 답을 해줘.
+파일이름을 02-openai-chat3.py 으로 해주고, 이미 있으면 업데이트를 해줘.
+[구현기술]
+.env 파일을 읽어서 api key를 가져와줘.
+langchain, openai api 를 사용해줘.
+현재 날짜와 시간은 python function으로 구현해줘
+인터넷검색도 langchain을 활용한 perplexity function으로 구현해줘
+perplexity의 모델명은 "sonar-pro"를 사용해줘.
+RAG function을 구현해줘. 이것은 vector DB는 FAISS를 사용해줘. retrieval은 ensemble 검색으로 해줘. 
+화면의 왼쪽에서 pdf 파일을 입력받아줘.
+embedding은 openai embeddings를 사용해줘
+
+답변은 항상 한국어로 해줘.
+
