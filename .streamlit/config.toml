@@ -1,8 +1,0 @@
-[server]
-headless = true
-enableCORS = true
-# localtunnel 등 무료 프록시에서 WebSocket/정적 청크가 깨지는 경우 완화
-enableWebsocketCompression = false
-
-[browser]
-gatherUsageStats = false
